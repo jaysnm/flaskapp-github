@@ -1,0 +1,9 @@
+# compiled bytes
+__pycache__/
+*.py[cod]
+# log files
+*.log
+# environment variables
+.env
+# code editor settings
+.vscode
