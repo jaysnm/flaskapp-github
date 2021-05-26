@@ -22,3 +22,9 @@ jobs:
       - name: Test the App
         run: |
           python tests.py
+      - name: Upload test results
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results-${{ matrix.python-version }}
+          path: junit/test-results-${{ matrix.python-version }}.xml
+        if: ${{ always() }}
